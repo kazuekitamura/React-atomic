@@ -4,6 +4,8 @@ import { UserCard } from "../organisms/user/UserCard";
 import React, { useContext } from "react";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
 import { UserContext } from "../../providers/UserProvider";
+// import { useRecoilState } from "recoil";
+// import { userState } from "../../store/userState";
 
 const users = [...Array(10).keys()].map((val) => {
   return {
@@ -21,6 +23,7 @@ const users = [...Array(10).keys()].map((val) => {
 
 export const Users = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
+
   const onClickSwitch = () => setUserInfo({ isAdmin: !userInfo.isAdmin });
   return (
     <SContainer>
