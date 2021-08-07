@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles.css";
 import { Router } from "./router/Router";
-// import { UserProvider } from "./providers/UserProvider";
+import { UserProvider } from "./providers/UserProvider";
 
 export default function App() {
   return (
-    <div className="App">
+    <UserProvider>
       <Router />
-    </div>
+    </UserProvider>
   );
 }
